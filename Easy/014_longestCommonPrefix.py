@@ -19,9 +19,6 @@ Constraints:
 strs[i] consists of only lowercase English letters.
 """
 
-from typing import List
-from typing_extensions import Self
-
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
         if not strs:
@@ -35,4 +32,3 @@ class Solution:
                 return smallest[:i]
         return smallest
 
-print(Solution.longestCommonPrefix(Self, ["flower","flow","flight"]))

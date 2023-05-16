@@ -22,7 +22,7 @@ Constraints:
 
 -231 <= x <= 231 - 1
 """
-from typing_extensions import Self
+
 
 class Solution:
     def isPalindrome(self, x: int) -> bool:
@@ -39,4 +39,3 @@ class Solution:
         else:
             return True
 
-print(Solution.isPalindrome(Self, 121))

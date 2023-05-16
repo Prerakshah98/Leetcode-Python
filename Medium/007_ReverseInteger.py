@@ -24,7 +24,7 @@ Constraints:
 -231 <= x <= 231 - 1
 """
 
-from typing_extensions import Self
+
 class Solution:
     def reverse(self, x: int) -> int:
         x = str(x)
@@ -35,4 +35,3 @@ class Solution:
 
         return x if -2**31<=x<=2**31 else 0
 
-print(Solution.reverse(Self,120))

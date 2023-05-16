@@ -18,9 +18,6 @@ Constraints:
 -109 <= nums[i] <= 109
 """
 
-from typing import List
-from typing_extensions import Self
-
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
         dic = {}
@@ -33,4 +30,3 @@ class Solution:
         
         return False
 
-print(Solution.containsDuplicate(Self,[1,1,1,3,3,4,3,2,4,2]))

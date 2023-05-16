@@ -42,7 +42,6 @@ class Solution:
                 if sum  == target:
                     return[i,j]
 
-print(Solution.twoSum(Self,[3,3], 6))
 
 
         
