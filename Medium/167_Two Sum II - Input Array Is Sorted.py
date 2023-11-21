@@ -32,7 +32,7 @@ Constraints:
 numbers is sorted in non-decreasing order.
 -1000 <= target <= 1000
 The tests are generated such that there is exactly one solution."""
-
+from typing import List
 class Solution:
     def twoSum(self, numbers: List[int], target: int) -> List[int]:
         first, last = 0, len(numbers)-1
@@ -43,3 +43,15 @@ class Solution:
                 first += 1
             else:
                 return [first+1,last+1]
+            
+# Test Cases
+if __name__ == "__main__":
+    sol = Solution()
+    test_cases = [
+        ([2, 7, 11, 15], 9),  # Test case where target is present
+        ([2, 3, 4], 6),      # Another test case where target is present
+    ]
+
+    for i, (numbers, target) in enumerate(test_cases, 1):
+        result = sol.twoSum(numbers, target)
+        print(f"Test Case {i}: Numbers = {numbers}, Target = {target}, Indices = {result}")

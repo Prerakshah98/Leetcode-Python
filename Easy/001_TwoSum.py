@@ -32,7 +32,6 @@ Follow-up: Can you come up with an algorithm that is less than O(n2) time comple
 """
 
 from typing import List
-from typing_extensions import Self
 
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
@@ -42,6 +41,16 @@ class Solution:
                 if sum  == target:
                     return[i,j]
 
+if __name__ == "__main__":
+    sol = Solution()
+    test_cases = [
+        ([2, 7, 11, 15], 9),  # Example test case 1
+        ([3, 2, 4], 6),  # Example test case 2
+        ([-1, 0, 1, 2, -1, -4], 0),  # Additional test case
+    ]
 
+    for i, (nums, target) in enumerate(test_cases, 1):
+        result = sol.twoSum(nums, target)
+        print(f"Test Case {i}: nums = {nums}, target = {target}, Result = {result}")
 
         

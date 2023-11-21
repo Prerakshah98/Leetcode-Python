@@ -47,3 +47,20 @@ class Solution:
             return True
         else:
             return False
+        
+if __name__ == "__main__":
+    sol = Solution()
+    test_cases = [
+        "()",              # Valid test case 1
+        "()[]{}",          # Valid test case 2
+        "(]",              # Invalid test case 3
+        "([)]",            # Invalid test case 4
+        "{[]}",            # Valid test case 5
+        "",                # Empty string
+        "((()))",          # Valid test case 6
+        "{{{{{{",          # Invalid test case 7
+    ]
+
+    for i, case in enumerate(test_cases, 1):
+        result = sol.isValid(case)
+        print(f"Test Case {i}: Input = '{case}', Result = {result}")

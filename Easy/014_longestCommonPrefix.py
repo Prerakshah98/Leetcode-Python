@@ -18,6 +18,7 @@ Constraints:
 0 <= strs[i].length <= 200
 strs[i] consists of only lowercase English letters.
 """
+from typing import List
 
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
@@ -32,3 +33,16 @@ class Solution:
                 return smallest[:i]
         return smallest
 
+# Test Cases
+if __name__ == "__main__":
+    sol = Solution()
+    test_cases = [
+        ["flower", "flow", "flight"],  # Example test case 1
+        ["dog", "racecar", "car"],    # Example test case 2
+        ["hello", "hey", "hi"],       # No common prefix
+        ["abc", "abcd", "abcde"],     # Common prefix is "abc"
+    ]
+
+    for i, case in enumerate(test_cases, 1):
+        result = sol.longestCommonPrefix(case)
+        print(f"Test Case {i}: Input = {case}, Longest Common Prefix = {result}")

@@ -17,7 +17,7 @@ Constraints:
 1 <= nums.length <= 105
 -109 <= nums[i] <= 109
 """
-
+from typing import List
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
         dic = {}
@@ -30,3 +30,16 @@ class Solution:
         
         return False
 
+if __name__ == "__main__":
+    sol = Solution()
+    test_cases = [
+        [1, 2, 3, 4],  # No duplicates
+        [1, 2, 3, 1],  # Duplicates present
+        [3, 3, 3, 3, 3],  # All elements are the same
+        [4, 5, 6, 7],  # No duplicates
+        []  # Empty list
+    ]
+
+    for i, case in enumerate(test_cases, 1):
+        result = sol.containsDuplicate(case)
+        print(f"Test Case {i}: Input = {case}, Contains Duplicate? {result}")

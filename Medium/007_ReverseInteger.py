@@ -35,3 +35,17 @@ class Solution:
 
         return x if -2**31<=x<=2**31 else 0
 
+# Test Cases
+if __name__ == "__main__":
+    sol = Solution()
+    test_cases = [
+        123,  # Positive number
+        -123,  # Negative number
+        120,  # Number with trailing zero
+        0,  # Zero
+        1534236469  # Overflow test case
+    ]
+
+    for i, case in enumerate(test_cases, 1):
+        result = sol.reverse(case)
+        print(f"Test Case {i}: Input = {case}, Output = {result}")

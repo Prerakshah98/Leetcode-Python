@@ -23,6 +23,7 @@ Follow up: Recursive solution is trivial, could you do it iteratively?
 """
 
 # Definition for a binary tree node.
+
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
@@ -33,5 +34,22 @@ class Solution:
         if root is None: 
             return []
         else: 
-            return Solution.inorderTraversal(root.left) + [root.val] + Solution.inorderTraversal(root.right)
+            return self.inorderTraversal(root.left) + [root.val] + self.inorderTraversal(root.right)
         
+# Test Cases
+if __name__ == "__main__":
+    # Creating a tree
+    # Example Tree: 
+    #       1
+    #        \
+    #         2
+    #        /
+    #       3
+    # In-order traversal sequence should be [1, 3, 2]
+    root = TreeNode(1)
+    root.right = TreeNode(2)
+    root.right.left = TreeNode(3)
+
+    sol = Solution()
+    result = sol.inorderTraversal(root)
+    print("In-order Traversal:", result)
