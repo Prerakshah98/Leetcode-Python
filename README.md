@@ -13,6 +13,7 @@ Welcome to my journey through LeetCode challenges in Python! 🌟 This repositor
 📩 Get in Touch
 Have questions, ideas, or just want to connect? Let's chat! 🚀
 
-LinkedIn: Your LinkedIn Profile
+LinkedIn: [Your LinkedIn Profile](https://www.linkedin.com/in/prerak98/)
 Email: prerak1998@gmail.com
+Portfolio: https://prerakshah98.github.io/portfolio/
 Get ready to crack those algorithms and have fun coding! Happy exploring! 🌟
