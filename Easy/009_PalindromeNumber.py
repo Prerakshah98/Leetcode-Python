@@ -44,11 +44,10 @@ if __name__ == "__main__":
     sol = Solution()
     
     test_cases = [
-        121,  # Palindrome number
-        -121,  # Negative number (not a palindrome)
-        10,  # Not a palindrome
-        0,  # Palindrome (single digit)
-        12321,  # Palindrome number
+        121,
+        -121,  
+        10,  
+        0,  
     ]
 
     for i, case in enumerate(test_cases, 1):

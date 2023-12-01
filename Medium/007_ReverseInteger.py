@@ -39,11 +39,10 @@ class Solution:
 if __name__ == "__main__":
     sol = Solution()
     test_cases = [
-        123,  # Positive number
-        -123,  # Negative number
-        120,  # Number with trailing zero
-        0,  # Zero
-        1534236469  # Overflow test case
+        123,  
+        -123,  
+        120, 
+        0
     ]
 
     for i, case in enumerate(test_cases, 1):

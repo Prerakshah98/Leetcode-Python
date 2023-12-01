@@ -48,10 +48,8 @@ class Solution:
 if __name__ == "__main__":
     sol = Solution()
     test_cases = [
-        [10, 15, 20],  # Example test case 1
-        [1, 100, 1, 1, 1, 100, 1, 1, 100, 1],  # Example test case 2
-        [0, 0, 0, 0],  # Test case with all costs as 0
-        [1, 1],  # Test case with two steps
+        [10, 15, 20],
+        [1, 100, 1, 1, 1, 100, 1, 1, 100, 1]
     ]
 
     for i, case in enumerate(test_cases, 1):

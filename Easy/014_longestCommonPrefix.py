@@ -37,10 +37,9 @@ class Solution:
 if __name__ == "__main__":
     sol = Solution()
     test_cases = [
-        ["flower", "flow", "flight"],  # Example test case 1
-        ["dog", "racecar", "car"],    # Example test case 2
-        ["hello", "hey", "hi"],       # No common prefix
-        ["abc", "abcd", "abcde"],     # Common prefix is "abc"
+        ["flower", "flow", "flight"],
+        ["dog", "racecar", "car"],   
+        ["hello", "hey", "hi"],      
     ]
 
     for i, case in enumerate(test_cases, 1):

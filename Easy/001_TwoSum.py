@@ -44,9 +44,9 @@ class Solution:
 if __name__ == "__main__":
     sol = Solution()
     test_cases = [
-        ([2, 7, 11, 15], 9),  # Example test case 1
-        ([3, 2, 4], 6),  # Example test case 2
-        ([-1, 0, 1, 2, -1, -4], 0),  # Additional test case
+        ([2, 7, 11, 15], 9), 
+        ([3, 2, 4], 6),  
+        ([3,3], 6),  
     ]
 
     for i, (nums, target) in enumerate(test_cases, 1):

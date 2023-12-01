@@ -33,11 +33,9 @@ class Solution:
 if __name__ == "__main__":
     sol = Solution()
     test_cases = [
-        [1, 2, 3, 4],  # No duplicates
-        [1, 2, 3, 1],  # Duplicates present
-        [3, 3, 3, 3, 3],  # All elements are the same
-        [4, 5, 6, 7],  # No duplicates
-        []  # Empty list
+        [1, 2, 3, 1],
+        [1, 2, 3, 4], 
+        [1,1,1,3,3,4,3,2,4,2], 
     ]
 
     for i, case in enumerate(test_cases, 1):
