@@ -38,12 +38,18 @@ from typing import List
 
 class Solution:
     def countBits(self, n: int) -> List[int]:
-        ans=[]
-        for i in range(0,n+1):
-            b=bin(i)
-            ans.append(b.count('1'))
-        return ans
-    
+        # ans=[]
+        # for i in range(0,n+1):
+        #     b=bin(i)
+        #     ans.append(b.count('1'))
+        # return ans
+        
+        ans=[0]
+
+        while (len(ans)<=n):
+            ans.extend([i+1 for i in ans])
+        
+        return ans[:n+1]
 
 # Test Cases
 if __name__ == "__main__":
