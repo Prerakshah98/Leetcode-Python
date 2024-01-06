@@ -21,16 +21,41 @@ The number of nodes in the tree is in the range [0, 104].
 -100 <= Node.val <= 100"""
 
 # Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
 class Solution:
-    def maxDepth(self, root: Optional[TreeNode]) -> int:
+    def maxDepth(self, root: [TreeNode]) -> int:
         if not root:
             return 0
         left = self.maxDepth(root.left)
         right = self.maxDepth(root.right)
         
         return max(left, right)+1
+
+
+
+# Test cases
+if __name__ == "__main__":
+    # Creating tree nodes
+    root1 = TreeNode(3)
+    root1.left = TreeNode(9)
+    root1.right = TreeNode(20)
+    root1.right.left = TreeNode(15)
+    root1.right.right = TreeNode(7)
+    root1.right.right.right = TreeNode(14)
+
+    root2 = TreeNode(1)
+    root2.left = TreeNode(2)
+    root2.right = TreeNode(3)
+    root2.left.left = TreeNode(4)
+    root2.left.right = TreeNode(5)
+
+    # Creating Solution object
+    sol = Solution()
+
+    # Testing maxDepth function
+    print("Max depth of root1:", sol.maxDepth(root1))  # Output: 4
+    print("Max depth of root2:", sol.maxDepth(root2))  # Output: 3
