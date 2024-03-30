@@ -1,6 +1,5 @@
 """Given a string s, find the length of the longest 
-substring
- without repeating characters.
+substring without repeating characters.
 
  
 
@@ -29,6 +28,23 @@ s consists of English letters, digits, symbols and spaces."""
 
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
+        # Brute force
+        # n = len(s)
+        # res = 0
+        
+        # for i in range(n):
+        #     seen = ''
+        #     for j in range(i, n):
+        #         if s[j] not in seen:
+        #             seen += s[j]
+        #             res = max(res, len(seen))
+        #         else:
+        #             break
+        
+        # return res
+        
+      
+        # Optimized 1
         # charSet=set()
         # result = 0
 
@@ -42,6 +58,8 @@ class Solution:
         #     result = max(result, r-l+1)
         # return result                                
 
+        
+        # Optimized 2
         seen = ''
         res = 0
 
