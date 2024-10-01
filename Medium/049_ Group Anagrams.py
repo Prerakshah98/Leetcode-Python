@@ -27,10 +27,29 @@ strs[i] consists of lowercase English letters.
 from typing import List
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        # groups = []
+
+        # for word in strs:
+        #     added = False
+        #     print(word)
+        #     print("groups",groups)
+        #     for group in groups:
+        #         print("group:",group)
+        #         if len(word) == len(group[0]) and sorted(word) == sorted(group[0]):
+        #             group.append(word)
+        #             added = True
+        #             break
+        #     if not added:
+        #         groups.append([word])
+
+        # return groups
+                
+        
         dic = {}
 
         for s in strs:
             sort = ''.join(sorted(s))
+            print(sorted(s))
             if sort in dic:
                 dic[sort].append(s)
             else:
