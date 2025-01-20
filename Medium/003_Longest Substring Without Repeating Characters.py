@@ -87,34 +87,3 @@ if __name__ == "__main__":
     for i, case in enumerate(test_cases, 1):
         result = sol.lengthOfLongestSubstring(case)
         print(f"Test Case {i}: Input = {case}, Longest Substring Length = {result}")
-        
-        
-        
-class Solution:
-    def dailyTemperatures(self, temperatures: List[int]) -> List[int]:
-        # n = len(temperatures)
-        # result = [0] * n
-
-        # for i in range(n):
-        #     for j in range(i + 1, n):
-        #         if temperatures[j] > temperatures[i]:
-        #             result[i] = j - i
-        #             break
-
-        # return result
-
-        n = len(temperatures)
-        result = [0] * n
-        stack = []
-
-        for i in range(n):
-            print(temperatures[i])
-            print(stack)
-            while stack and temperatures[i] > temperatures[stack[-1]]:
-                idx = stack.pop()
-                print("idx",idx)
-                result[idx] = i - idx
-                print(result)
-            stack.append(i)
-
-        return result
